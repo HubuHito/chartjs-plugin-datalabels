@@ -72,3 +72,15 @@ display: function(context) {
 ## Clipping
 
 `clip: 'true'` 时表示当标签超出图表绘制区域是是否隐藏，(参考 [CanvasRenderingContext2D.clip()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clip))
+
+## Position
+
+`position` 可配置标签具体的绘制位置。一般情况下不要配置该配置项，只有特殊场景可能需要，可选值如下：
+
+- `position: auto` 根据锚点位置绘制标签
+- `position: center` 在图表区域中间位置绘制标签
+- `position: [10, 100]` 在 x = 10，y = 100的位置绘制
+
+::: warning
+`position` 设置为 `auto` 和 `[10, 100]` 在大多数场景下是无意义的，因为它们会在指定位置绘制标签，所有标签会重叠在一起。
+:::

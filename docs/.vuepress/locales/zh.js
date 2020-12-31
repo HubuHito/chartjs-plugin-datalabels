@@ -58,6 +58,7 @@ module.exports = {
                 children: [
                     'advanced/multiple-labels',
                     'advanced/custom-labels',
+                    'advanced/position-label'
                 ],
             }
         ]
