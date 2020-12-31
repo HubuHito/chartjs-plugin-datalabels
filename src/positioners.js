@@ -141,6 +141,33 @@ function clipped(segment, area) {
 	};
 }
 
+function specificPosition(segment, position, area) {
+	var x0 = segment.x0;
+	var x1 = segment.x1;
+	var y0 = segment.y0;
+	var y1 = segment.y1;
+	switch (position) {
+	case 'center':
+		x0 = x1 = (area.left + area.right) / 2;
+		y0 = y1 = (area.top + area.bottom) / 2;
+		segment.vx = segment.vy = 0;
+		break;
+	default:
+		if (Array.isArray(position)) {
+			x0 = x1 = position[0];
+			y0 = y1 = position[1];
+			segment.vx = segment.vy = 0;
+		}
+		break;
+	}
+	return {
+		x0: x0,
+		x1: x1,
+		y0: y0,
+		y1: y1
+	};
+}
+
 function compute(range, config) {
 	var anchor = config.anchor;
 	var segment = range;
@@ -148,6 +175,11 @@ function compute(range, config) {
 
 	if (config.clamp) {
 		segment = clipped(segment, config.area);
+	}
+
+	if (config.position) {
+		// if value of config.position is effective， vx and vy will be reset to 0
+		segment = specificPosition(segment, config.position, config.area);
 	}
 
 	if (anchor === 'start') {

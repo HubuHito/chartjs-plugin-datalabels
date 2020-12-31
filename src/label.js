@@ -263,7 +263,8 @@ helpers.merge(Label.prototype, {
 			textShadowBlur: resolve([config.textShadowBlur, 0], context, index),
 			textShadowColor: resolve([config.textShadowColor, color], context, index),
 			textStrokeColor: resolve([config.textStrokeColor, color], context, index),
-			textStrokeWidth: resolve([config.textStrokeWidth, 0], context, index)
+			textStrokeWidth: resolve([config.textStrokeWidth, 0], context, index),
+			position: resolve([config.position, 'auto'], context, index)
 		};
 	},
 

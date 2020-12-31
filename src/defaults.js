@@ -65,5 +65,6 @@ export default {
 	textStrokeColor: undefined,
 	textStrokeWidth: 0,
 	textShadowBlur: 0,
-	textShadowColor: undefined
+	textShadowColor: undefined,
+	position: 'auto'
 };
