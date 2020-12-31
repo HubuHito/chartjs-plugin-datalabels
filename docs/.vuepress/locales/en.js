@@ -18,6 +18,8 @@ module.exports = {
             'positioning',
             'formatting',
             'events',
+            'typescript',
+            'migration'
         ],
         '/samples/': [
             {

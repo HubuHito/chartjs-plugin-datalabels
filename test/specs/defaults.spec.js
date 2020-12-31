@@ -1,4 +1,5 @@
 import Chart from 'chart.js';
+import plugin from 'chartjs-plugin-datalabels';
 
 describe('defaults.js', function() {
 	var expected = {
@@ -38,7 +39,7 @@ describe('defaults.js', function() {
 		// can't test formatter?!
 	};
 
-	var plugin = Chart.registry.getPlugin('datalabels');
+	jasmine.chart.register(plugin);
 
 	it('should be registered as global plugin options', function() {
 		var globals = Chart.defaults.plugins.datalabels;
@@ -65,7 +66,11 @@ describe('defaults.js', function() {
 	});
 
 	describe('default formatter', function() {
-		var formatter = Chart.defaults.plugins.datalabels.formatter;
+		var formatter = null;
+
+		beforeEach(() => {
+			formatter = Chart.defaults.plugins.datalabels.formatter;
+		});
 
 		it('should null if value is null or undefined', function() {
 			expect(formatter()).toBeNull();

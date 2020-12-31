@@ -142,7 +142,11 @@ function handleClickEvents(chart, event) {
 	}
 }
 
+<<<<<<< HEAD
 var plugin = {
+=======
+export default {
+>>>>>>> upstream/chartjs-next
 	id: 'datalabels',
 
 	defaults: defaults,
@@ -275,9 +279,3 @@ var plugin = {
 		delete expando._dirty;
 	}
 };
-
-// TODO Remove at version 1, we shouldn't automatically register plugins.
-// https://github.com/chartjs/chartjs-plugin-datalabels/issues/42
-Chart.register(plugin);
-
-export default plugin;
