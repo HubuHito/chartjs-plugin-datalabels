@@ -32,13 +32,14 @@ var config = /* <block:config:0> */ {
       datalabels: {
         labels: {
           value: {
+            textAlign: 'center',
             position: 'center',
             formatter: function(value, ctx) {
               const data = ctx.dataset.data.reduce((pre, next) => {
                 return pre + next
               }, 0);
               const percent = (value / data) * 100;
-              return percent.toFixed(2) + '%';
+              return [percent.toFixed(2) + '%', labels[ctx.dataIndex]];
             }
           }
         }
@@ -54,7 +55,7 @@ var config = /* <block:config:0> */ {
         },
         font: {
           weight: 'bold',
-          size: 40
+          size: 20
         }
       }
     },

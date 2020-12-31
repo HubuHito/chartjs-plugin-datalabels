@@ -142,11 +142,7 @@ function handleClickEvents(chart, event) {
 	}
 }
 
-<<<<<<< HEAD
-var plugin = {
-=======
 export default {
->>>>>>> upstream/chartjs-next
 	id: 'datalabels',
 
 	defaults: defaults,
