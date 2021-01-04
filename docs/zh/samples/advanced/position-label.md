@@ -1,6 +1,6 @@
-# 设置固定的标签位置
+# 设置固定位置的标签
 
-用 [position](../../guide/positioning.md#position) 指定标签绘制位置，在悬浮时显示对应的百分比。
+用 [position](../../guide/positioning.md#position) 指定标签绘制位置，如在悬浮时显示对应的百分比。
 
 ```js chart-editor
 // <block:setup:2>

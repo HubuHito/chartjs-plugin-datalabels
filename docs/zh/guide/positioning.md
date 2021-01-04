@@ -75,9 +75,9 @@ display: function(context) {
 
 ## Position
 
-`position` 可配置标签具体的绘制位置。一般情况下不要配置该配置项，只有特殊场景可能需要，可选值如下：
+`position` 可配置标签具体的绘制位置。一般情况下不需要配置，可选值如下：
 
-- `position: auto` 根据锚点位置绘制标签
+- `position: auto`（默认值） 根据锚点位置绘制标签
 - `position: center` 在图表区域中间位置绘制标签
 - `position: [10, 100]` 在 x = 10，y = 100的位置绘制
 
