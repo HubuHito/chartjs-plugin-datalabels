@@ -1,4 +1,5 @@
 module.exports = {
+    base: '/chartjs-plugin-datalabels/',
     head: [
         ['link', { rel: 'icon', href: `/favicon.png` }],
     ],

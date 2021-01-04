@@ -32,7 +32,8 @@
     "test-unit:dev": "karma start --grep",
     "test-types": "tsc -p types/test",
     "test": "npm run test-types && npm run test-unit",
-    "test:dev": "npm run test-unit:dev"
+    "test:dev": "npm run test-unit:dev",
+    "deploy": "bash deploy.sh"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.10.0",
