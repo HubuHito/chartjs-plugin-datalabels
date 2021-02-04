@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>标签 | chartjs-plugin-datalabels</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.png">
+    <meta name="description" content="支持任意类型的图表显示文本标签">
+    <link rel="preload" href="/assets/css/0.styles.993ccdb3.css" as="style"><link rel="preload" href="/assets/js/app.21450e89.js" as="script"><link rel="preload" href="/assets/js/3.490201fa.js" as="script"><link rel="preload" href="/assets/js/40.a174d414.js" as="script"><link rel="prefetch" href="/assets/js/10.fb4edd51.js"><link rel="prefetch" href="/assets/js/11.98e1e367.js"><link rel="prefetch" href="/assets/js/12.e703f996.js"><link rel="prefetch" href="/assets/js/13.6a69dd4b.js"><link rel="prefetch" href="/assets/js/14.2b0c5e86.js"><link rel="prefetch" href="/assets/js/15.4d86d0e3.js"><link rel="prefetch" href="/assets/js/16.ba052cb3.js"><link rel="prefetch" href="/assets/js/17.a41000be.js"><link rel="prefetch" href="/assets/js/18.b72355fb.js"><link rel="prefetch" href="/assets/js/19.91a29a32.js"><link rel="prefetch" href="/assets/js/20.e304940c.js"><link rel="prefetch" href="/assets/js/21.d9877567.js"><link rel="prefetch" href="/assets/js/22.472c421c.js"><link rel="prefetch" href="/assets/js/23.bc192949.js"><link rel="prefetch" href="/assets/js/24.b68f50cb.js"><link rel="prefetch" href="/assets/js/25.0665e650.js"><link rel="prefetch" href="/assets/js/26.35e7f9ec.js"><link rel="prefetch" href="/assets/js/27.4fb31992.js"><link rel="prefetch" href="/assets/js/28.3268ef91.js"><link rel="prefetch" href="/assets/js/29.46f6341b.js"><link rel="prefetch" href="/assets/js/30.ab6e3e27.js"><link rel="prefetch" href="/assets/js/31.0940c401.js"><link rel="prefetch" href="/assets/js/32.65b6e3f0.js"><link rel="prefetch" href="/assets/js/33.10973862.js"><link rel="prefetch" href="/assets/js/34.4d895f9e.js"><link rel="prefetch" href="/assets/js/35.fa3fda6e.js"><link rel="prefetch" href="/assets/js/36.d37cc874.js"><link rel="prefetch" href="/assets/js/37.c82dc721.js"><link rel="prefetch" href="/assets/js/38.b32ae064.js"><link rel="prefetch" href="/assets/js/39.f8420783.js"><link rel="prefetch" href="/assets/js/4.a1b0cbc5.js"><link rel="prefetch" href="/assets/js/41.7298dd60.js"><link rel="prefetch" href="/assets/js/42.c3a65f49.js"><link rel="prefetch" href="/assets/js/43.1a120a53.js"><link rel="prefetch" href="/assets/js/44.898297d2.js"><link rel="prefetch" href="/assets/js/45.ee2b0074.js"><link rel="prefetch" href="/assets/js/46.7266ac9c.js"><link rel="prefetch" href="/assets/js/47.17a5c1f8.js"><link rel="prefetch" href="/assets/js/48.70323057.js"><link rel="prefetch" href="/assets/js/49.11b36baf.js"><link rel="prefetch" href="/assets/js/5.0854b8b7.js"><link rel="prefetch" href="/assets/js/50.e0b073b4.js"><link rel="prefetch" href="/assets/js/51.773f841b.js"><link rel="prefetch" href="/assets/js/52.ef4cd125.js"><link rel="prefetch" href="/assets/js/53.7302b972.js"><link rel="prefetch" href="/assets/js/54.35e08a20.js"><link rel="prefetch" href="/assets/js/55.02242398.js"><link rel="prefetch" href="/assets/js/56.67812fd1.js"><link rel="prefetch" href="/assets/js/57.b9a92111.js"><link rel="prefetch" href="/assets/js/58.76cf0a0f.js"><link rel="prefetch" href="/assets/js/6.262ad3ee.js"><link rel="prefetch" href="/assets/js/7.b9c2b592.js"><link rel="prefetch" href="/assets/js/8.5f51ed7e.js"><link rel="prefetch" href="/assets/js/9.085de6e6.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.06da1f1e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.993ccdb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/zh/" class="home-link router-link-active"><img src="/favicon.png" alt="chartjs-plugin-datalabels" class="logo"> <span class="site-name can-hide">chartjs-plugin-datalabels</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/zh/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/zh/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/zh/samples/charts/line.html" class="nav-link">
+  例子
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="选择语言" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/labels.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/labels.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/chartjs/chartjs-plugin-datalabels" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/zh/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/zh/guide/" class="nav-link router-link-active">
+  指南
+</a></div><div class="nav-item"><a href="/zh/samples/charts/line.html" class="nav-link">
+  例子
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="选择语言" class="dropdown-title"><span class="title">选择语言</span> <span class="arrow down"></span></button> <button type="button" aria-label="选择语言" class="mobile-dropdown-title"><span class="title">选择语言</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/guide/labels.html" class="nav-link">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/guide/labels.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/chartjs/chartjs-plugin-datalabels" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/zh/guide/" aria-current="page" class="sidebar-link">介绍</a></li><li><a href="/zh/guide/getting-started.html" class="sidebar-link">快速上手</a></li><li><a href="/zh/guide/options.html" class="sidebar-link">配置项</a></li><li><a href="/zh/guide/labels.html" aria-current="page" class="active sidebar-link">标签</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/zh/guide/labels.html#多标签" class="sidebar-link">多标签</a></li><li class="sidebar-sub-header"><a href="/zh/guide/labels.html#dataset-overrides" class="sidebar-link">Dataset Overrides</a></li></ul></li><li><a href="/zh/guide/positioning.html" class="sidebar-link">位置</a></li><li><a href="/zh/guide/formatting.html" class="sidebar-link">格式化</a></li><li><a href="/zh/guide/events.html" class="sidebar-link">事件</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="标签"><a href="#标签" class="header-anchor">#</a> 标签</h1> <p>默认情况下，每个数据项会创建一个标签，但是也可以使用 <code>labels</code> 配置给每个数据项定义多个标签。<code>labels</code> 配置项是一个对象类型，对象每个属性表示一个标签，值表示该标签的配置项。<code>labels</code> 配置项会被图表配置和全局配置合并。</p> <h2 id="多标签"><a href="#多标签" class="header-anchor">#</a> 多标签</h2> <p>下面代码会给每个数据项添加两个标签，一个是 <code>title</code>，一个是 <code>value</code>。<code>title</code> 标签的文本是蓝色，字体加粗；<code>value</code> 标签文本是绿色，字体正常。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    options<span class="token operator">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token operator">:</span> <span class="token punctuation">{</span>
+            datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                color<span class="token operator">:</span> <span class="token string">'blue'</span><span class="token punctuation">,</span>
+                labels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    title<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        font<span class="token operator">:</span> <span class="token punctuation">{</span>
+                            weight<span class="token operator">:</span> <span class="token string">'bold'</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    value<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'green'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="dataset-overrides"><a href="#dataset-overrides" class="header-anchor">#</a> Dataset Overrides</h2> <p>可通过配置特定数据集（<code>datasets</code>）的属性来覆盖整个图表的数据集配置项（上面例子是整个数据集的配置，每个数据集都会应用该配置）。</p> <h3 id="修改标签"><a href="#修改标签" class="header-anchor">#</a> 修改标签</h3> <p>通过配置特定数据集的 <code>labels</code> 来覆盖图表的配置项，如：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        datasets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token comment">// First dataset.</span>
+            datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                color<span class="token operator">:</span> <span class="token string">'yellow'</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Second dataset.</span>
+            datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                labels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    title<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'green'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token operator">:</span> <span class="token punctuation">{</span>
+            datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                color<span class="token operator">:</span> <span class="token string">'pink'</span><span class="token punctuation">,</span>
+                labels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    value<span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+                    title<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'blue'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>上面例子会给 <strong>第一个</strong> 数据集创建下面两个标签：</p> <ul><li><code>value</code> 标签，字体为黄色（opions的配置项被数据集的配置覆盖）</li> <li><code>title</code> 标签，字体为蓝色（opions的配置项）</li></ul> <p><strong>第二个</strong> 数据集的会被配置如下两个标签：</p> <ul><li><code>value</code> 标签，字体为粉红色（opions的配置项）</li> <li><code>title</code> 标签，字体为绿色（opions的配置项被数据集的配置覆盖）</li></ul> <div class="custom-block warning"><p class="custom-block-title">重要</p> <p><code>labels.&lt;key&gt;</code> 定义的配置项总是会覆盖图表和数据集的配置（在上面列子中，第一个数据集的 <code>title</code> 标签颜色是蓝色，而不是黄色）。</p></div> <h3 id="添加标签"><a href="#添加标签" class="header-anchor">#</a> 添加标签</h3> <p>可以在特定数据集下面添加 <code>labels</code> 配置来添加标签。下面例子会给<strong>第一个</strong>数据集的每个数据项创建一个 <code>title</code> 标签，<strong>第二个</strong> 数据集的每个数据项会创建 <code>title</code> 和 <code>value</code> 两个标签：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        datasets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token comment">// First dataset.</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Second dataset.</span>
+            datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                labels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    value<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'green'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token operator">:</span> <span class="token punctuation">{</span>
+            datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                labels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    title<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'blue'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="移除标签"><a href="#移除标签" class="header-anchor">#</a> 移除标签</h3> <p>可以在特定数据集上面添加 <code>labels</code> 配置并设置属性值为 <code>null</code> 来移除标签。下面例子会移除 <strong>第二个</strong> 数据集的标签配置：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token punctuation">{</span>
+    data<span class="token operator">:</span> <span class="token punctuation">{</span>
+        datasets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+            <span class="token comment">// First dataset.</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+            <span class="token comment">// Second dataset.</span>
+            datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                labels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    title<span class="token operator">:</span> <span class="token keyword">null</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    options<span class="token operator">:</span> <span class="token punctuation">{</span>
+        plugins<span class="token operator">:</span> <span class="token punctuation">{</span>
+            datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                labels<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    title<span class="token operator">:</span> <span class="token punctuation">{</span>
+                        color<span class="token operator">:</span> <span class="token string">'blue'</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chartjs/chartjs-plugin-datalabels/edit/master/docs/zh/guide/labels.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">2020-12-25 10:38:09</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/zh/guide/options.html" class="prev">
+        配置项
+      </a></span> <span class="next"><a href="/zh/guide/positioning.html">
+        位置
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.21450e89.js" defer></script><script src="/assets/js/3.490201fa.js" defer></script><script src="/assets/js/40.a174d414.js" defer></script>
+  </body>
+</html>

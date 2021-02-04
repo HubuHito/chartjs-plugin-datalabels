@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Listeners | chartjs-plugin-datalabels</title>
+    <meta name="generator" content="VuePress 1.7.1">
+    <link rel="icon" href="/favicon.png">
+    <meta name="description" content="Display labels on data for any type of charts.">
+    <link rel="preload" href="/assets/css/0.styles.993ccdb3.css" as="style"><link rel="preload" href="/assets/js/app.21450e89.js" as="script"><link rel="preload" href="/assets/js/3.490201fa.js" as="script"><link rel="preload" href="/assets/js/28.3268ef91.js" as="script"><link rel="prefetch" href="/assets/js/10.fb4edd51.js"><link rel="prefetch" href="/assets/js/11.98e1e367.js"><link rel="prefetch" href="/assets/js/12.e703f996.js"><link rel="prefetch" href="/assets/js/13.6a69dd4b.js"><link rel="prefetch" href="/assets/js/14.2b0c5e86.js"><link rel="prefetch" href="/assets/js/15.4d86d0e3.js"><link rel="prefetch" href="/assets/js/16.ba052cb3.js"><link rel="prefetch" href="/assets/js/17.a41000be.js"><link rel="prefetch" href="/assets/js/18.b72355fb.js"><link rel="prefetch" href="/assets/js/19.91a29a32.js"><link rel="prefetch" href="/assets/js/20.e304940c.js"><link rel="prefetch" href="/assets/js/21.d9877567.js"><link rel="prefetch" href="/assets/js/22.472c421c.js"><link rel="prefetch" href="/assets/js/23.bc192949.js"><link rel="prefetch" href="/assets/js/24.b68f50cb.js"><link rel="prefetch" href="/assets/js/25.0665e650.js"><link rel="prefetch" href="/assets/js/26.35e7f9ec.js"><link rel="prefetch" href="/assets/js/27.4fb31992.js"><link rel="prefetch" href="/assets/js/29.46f6341b.js"><link rel="prefetch" href="/assets/js/30.ab6e3e27.js"><link rel="prefetch" href="/assets/js/31.0940c401.js"><link rel="prefetch" href="/assets/js/32.65b6e3f0.js"><link rel="prefetch" href="/assets/js/33.10973862.js"><link rel="prefetch" href="/assets/js/34.4d895f9e.js"><link rel="prefetch" href="/assets/js/35.fa3fda6e.js"><link rel="prefetch" href="/assets/js/36.d37cc874.js"><link rel="prefetch" href="/assets/js/37.c82dc721.js"><link rel="prefetch" href="/assets/js/38.b32ae064.js"><link rel="prefetch" href="/assets/js/39.f8420783.js"><link rel="prefetch" href="/assets/js/4.a1b0cbc5.js"><link rel="prefetch" href="/assets/js/40.a174d414.js"><link rel="prefetch" href="/assets/js/41.7298dd60.js"><link rel="prefetch" href="/assets/js/42.c3a65f49.js"><link rel="prefetch" href="/assets/js/43.1a120a53.js"><link rel="prefetch" href="/assets/js/44.898297d2.js"><link rel="prefetch" href="/assets/js/45.ee2b0074.js"><link rel="prefetch" href="/assets/js/46.7266ac9c.js"><link rel="prefetch" href="/assets/js/47.17a5c1f8.js"><link rel="prefetch" href="/assets/js/48.70323057.js"><link rel="prefetch" href="/assets/js/49.11b36baf.js"><link rel="prefetch" href="/assets/js/5.0854b8b7.js"><link rel="prefetch" href="/assets/js/50.e0b073b4.js"><link rel="prefetch" href="/assets/js/51.773f841b.js"><link rel="prefetch" href="/assets/js/52.ef4cd125.js"><link rel="prefetch" href="/assets/js/53.7302b972.js"><link rel="prefetch" href="/assets/js/54.35e08a20.js"><link rel="prefetch" href="/assets/js/55.02242398.js"><link rel="prefetch" href="/assets/js/56.67812fd1.js"><link rel="prefetch" href="/assets/js/57.b9a92111.js"><link rel="prefetch" href="/assets/js/58.76cf0a0f.js"><link rel="prefetch" href="/assets/js/6.262ad3ee.js"><link rel="prefetch" href="/assets/js/7.b9c2b592.js"><link rel="prefetch" href="/assets/js/8.5f51ed7e.js"><link rel="prefetch" href="/assets/js/9.085de6e6.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.06da1f1e.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.993ccdb3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.png" alt="chartjs-plugin-datalabels" class="logo"> <span class="site-name can-hide">chartjs-plugin-datalabels</span></a> <div class="links"><form id="search-form" role="search" class="algolia-search-wrapper search-box"><input id="algolia-search-input" class="search-query"></form> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/samples/" class="nav-link router-link-active">
+  Samples
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/samples/events/listeners.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/samples/events/listeners.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/chartjs/chartjs-plugin-datalabels" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/guide/" class="nav-link">
+  Guide
+</a></div><div class="nav-item"><a href="/samples/" class="nav-link router-link-active">
+  Samples
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Select language" class="dropdown-title"><span class="title">Languages</span> <span class="arrow down"></span></button> <button type="button" aria-label="Select language" class="mobile-dropdown-title"><span class="title">Languages</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/samples/events/listeners.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  English
+</a></li><li class="dropdown-item"><!----> <a href="/zh/samples/events/listeners.html" class="nav-link">
+  简体中文
+</a></li></ul></div></div> <a href="https://github.com/chartjs/chartjs-plugin-datalabels" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Charts</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/samples/charts/line.html" class="sidebar-link">Line</a></li><li><a href="/samples/charts/bar.html" class="sidebar-link">Bar</a></li><li><a href="/samples/charts/doughnut.html" class="sidebar-link">Doughnut</a></li><li><a href="/samples/charts/polar.html" class="sidebar-link">Polar Area</a></li><li><a href="/samples/charts/radar.html" class="sidebar-link">Radar</a></li><li><a href="/samples/charts/bubble.html" class="sidebar-link">Bubble</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Scriptable</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/samples/scriptable/interactions.html" class="sidebar-link">Interactions</a></li><li><a href="/samples/scriptable/data.html" class="sidebar-link">Data</a></li><li><a href="/samples/scriptable/dataset.html" class="sidebar-link">Dataset</a></li><li><a href="/samples/scriptable/indices.html" class="sidebar-link">Indices</a></li><li><a href="/samples/scriptable/mirror.html" class="sidebar-link">Mirror</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Events</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/samples/events/listeners.html" aria-current="page" class="active sidebar-link">Listeners</a></li><li><a href="/samples/events/highlight.html" class="sidebar-link">Highlight</a></li><li><a href="/samples/events/selection.html" class="sidebar-link">Selection</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>Advanced</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/samples/advanced/multiple-labels.html" class="sidebar-link">Multiple Labels</a></li><li><a href="/samples/advanced/custom-labels.html" class="sidebar-link">Custom Labels</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="listeners"><a href="#listeners" class="header-anchor">#</a> Listeners</h1> <p>Listen and log all <a href="/guide/events.html">label events</a> (see the <code>Output</code> tab).</p> <div class="chart-editor" data-v-7a1ec383><div class="chart-view" data-v-7a1ec383><canvas></canvas></div> <div class="chart-actions" data-v-0ff75765 data-v-7a1ec383></div> <div class="code-editor" data-v-39c02ae4 data-v-7a1ec383><div class="code-editor-header" data-v-39c02ae4><div class="code-editor-tabs" data-v-39c02ae4><button class="code-editor-tab" data-v-39c02ae4>
+        config
+      </button><button class="code-editor-tab" data-v-39c02ae4>
+        setup
+      </button><button class="code-editor-tab active" data-v-39c02ae4>
+        Output
+      </button></div> <div class="code-editor-tools" data-v-39c02ae4><!----> <a href="https://github.com/chartjs/chartjs-plugin-datalabels/blob/master/docs/samples/events/listeners.md" title="View on GitHub" target="_blank" class="code-editor-tool fab fa-github fa-lg" data-v-39c02ae4></a></div></div> <div class="code-editor-views" data-v-39c02ae4><div class="editor-textarea ps" style="display:none;" data-v-2edaba84 data-v-39c02ae4><div class="editor-textarea-content" data-v-2edaba84><div class="prism-editor-wrapper" data-v-2edaba84><div class="prism-editor__container"><textarea spellCheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" data-gramm="false" placeholder="" data-testid="textarea" class="prism-editor__textarea">{
+  type: 'line',
+  data: {
+    labels: labels,
+    datasets: [{
+      backgroundColor: Utils.color(0),
+      borderColor: Utils.color(0),
+      data: Utils.numbers({
+        count: DATA_COUNT,
+        min: 0,
+        max: 100
+      }),
+      datalabels: {
+        align: 'start'
+      }
+    }, {
+      backgroundColor: Utils.color(1),
+      borderColor: Utils.color(1),
+      data: Utils.numbers({
+        count: DATA_COUNT,
+        min: 0,
+        max: 100
+      })
+    }, {
+      backgroundColor: Utils.color(2),
+      borderColor: Utils.color(2),
+      data: Utils.numbers({
+        count: DATA_COUNT,
+        min: 0,
+        max: 100
+      }),
+      datalabels: {
+        align: 'end'
+      }
+    }]
+  },
+  options: {
+    plugins: {
+      datalabels: {
+        backgroundColor: function(context) {
+          return context.dataset.backgroundColor;
+        },
+        color: 'white',
+        font: {
+          weight: 'bold'
+        },
+        offset: 8,
+        padding: 6,
+        formatter: Math.round,
+        listeners: {
+          enter: function(context) {
+            log('enter', context);
+          },
+          leave: function(context) {
+            log('leave', context);
+          },
+          click: function(context) {
+            log('click', context);
+          }
+        }
+      }
+    },
+    // Core options
+    aspectRatio: 5 / 3,
+    layout: {
+      padding: {
+        top: 40,
+        right: 16,
+        bottom: 16,
+        left: 0
+      }
+    },
+    elements: {
+      line: {
+        fill: false,
+        tension: 0.4
+      }
+    },
+    scales: {
+      y: {
+        stacked: true
+      }
+    }
+  }
+} </textarea><pre data-testid="preview" class="prism-editor__editor"><span class="token punctuation">{</span>
+  type<span class="token operator">:</span> <span class="token string">'line'</span><span class="token punctuation">,</span>
+  data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    labels<span class="token operator">:</span> labels<span class="token punctuation">,</span>
+    datasets<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+      backgroundColor<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">color</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      borderColor<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">color</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      data<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">numbers</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token constant">DATA_COUNT</span><span class="token punctuation">,</span>
+        min<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        max<span class="token operator">:</span> <span class="token number">100</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+        align<span class="token operator">:</span> <span class="token string">'start'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      backgroundColor<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">color</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      borderColor<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">color</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      data<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">numbers</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token constant">DATA_COUNT</span><span class="token punctuation">,</span>
+        min<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        max<span class="token operator">:</span> <span class="token number">100</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      backgroundColor<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">color</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      borderColor<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">color</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      data<span class="token operator">:</span> Utils<span class="token punctuation">.</span><span class="token function">numbers</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        count<span class="token operator">:</span> <span class="token constant">DATA_COUNT</span><span class="token punctuation">,</span>
+        min<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        max<span class="token operator">:</span> <span class="token number">100</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+        align<span class="token operator">:</span> <span class="token string">'end'</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  options<span class="token operator">:</span> <span class="token punctuation">{</span>
+    plugins<span class="token operator">:</span> <span class="token punctuation">{</span>
+      datalabels<span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token function-variable function">backgroundColor</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> context<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>backgroundColor<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        color<span class="token operator">:</span> <span class="token string">'white'</span><span class="token punctuation">,</span>
+        font<span class="token operator">:</span> <span class="token punctuation">{</span>
+          weight<span class="token operator">:</span> <span class="token string">'bold'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        offset<span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+        padding<span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+        formatter<span class="token operator">:</span> Math<span class="token punctuation">.</span>round<span class="token punctuation">,</span>
+        listeners<span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token function-variable function">enter</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'enter'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">leave</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'leave'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span><span class="token punctuation">,</span>
+          <span class="token function-variable function">click</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// Core options</span>
+    aspectRatio<span class="token operator">:</span> <span class="token number">5</span> <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">,</span>
+    layout<span class="token operator">:</span> <span class="token punctuation">{</span>
+      padding<span class="token operator">:</span> <span class="token punctuation">{</span>
+        top<span class="token operator">:</span> <span class="token number">40</span><span class="token punctuation">,</span>
+        right<span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+        bottom<span class="token operator">:</span> <span class="token number">16</span><span class="token punctuation">,</span>
+        left<span class="token operator">:</span> <span class="token number">0</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    elements<span class="token operator">:</span> <span class="token punctuation">{</span>
+      line<span class="token operator">:</span> <span class="token punctuation">{</span>
+        fill<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        tension<span class="token operator">:</span> <span class="token number">0.4</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    scales<span class="token operator">:</span> <span class="token punctuation">{</span>
+      y<span class="token operator">:</span> <span class="token punctuation">{</span>
+        stacked<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <br /></pre></div></div></div></div><div class="editor-textarea ps" style="display:none;" data-v-2edaba84 data-v-39c02ae4><div class="editor-textarea-content" data-v-2edaba84><div class="prism-editor-wrapper" data-v-2edaba84><div class="prism-editor__container"><textarea spellCheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" data-gramm="false" placeholder="" data-testid="textarea" class="prism-editor__textarea">var DATA_COUNT = 6;
+var labels = [];
+Utils.srand(8);
+for (var idx = 0; idx &lt; DATA_COUNT; ++idx) {
+  labels.push('' + idx);
+}
+function log(type, context) {
+  var i = context.datasetIndex;
+  var j = context.dataIndex;
+  var v = context.dataset.data[j];
+  Utils.log(type + ': ' + i + '-' + j + ' (' + v + ')')
+}
+</textarea><pre data-testid="preview" class="prism-editor__editor"><span class="token keyword">var</span> <span class="token constant">DATA_COUNT</span> <span class="token operator">=</span> <span class="token number">6</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> labels <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+Utils<span class="token punctuation">.</span><span class="token function">srand</span><span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> idx <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> idx <span class="token operator">&lt;</span> <span class="token constant">DATA_COUNT</span><span class="token punctuation">;</span> <span class="token operator">++</span>idx<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  labels<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">''</span> <span class="token operator">+</span> idx<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">log</span><span class="token punctuation">(</span><span class="token parameter">type<span class="token punctuation">,</span> context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> i <span class="token operator">=</span> context<span class="token punctuation">.</span>datasetIndex<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> j <span class="token operator">=</span> context<span class="token punctuation">.</span>dataIndex<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> v <span class="token operator">=</span> context<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  Utils<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>type <span class="token operator">+</span> <span class="token string">': '</span> <span class="token operator">+</span> i <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> j <span class="token operator">+</span> <span class="token string">' ('</span> <span class="token operator">+</span> v <span class="token operator">+</span> <span class="token string">')'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<br /></pre></div></div></div></div><div class="editor-output ps" data-v-19a66f43 data-v-39c02ae4><div class="editor-output-content" data-v-19a66f43> <span class="text-muted" data-v-19a66f43>Interact with labels to log events</span></div></div></div></div></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/chartjs/chartjs-plugin-datalabels/edit/master/docs/samples/events/listeners.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">12/10/2020, 4:01:46 AM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/samples/scriptable/mirror.html" class="prev">
+        Mirror
+      </a></span> <span class="next"><a href="/samples/events/highlight.html">
+        Highlight
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.21450e89.js" defer></script><script src="/assets/js/3.490201fa.js" defer></script><script src="/assets/js/28.3268ef91.js" defer></script>
+  </body>
+</html>
