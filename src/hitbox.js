@@ -1,4 +1,4 @@
-import Chart from 'chart.js';
+import {Chart} from 'chart.js';
 
 var helpers = Chart.helpers;
 
@@ -88,9 +88,9 @@ helpers.merge(HitBox.prototype, {
 		point = rotated(point, me.center(), -me._rotation);
 
 		return !(point.x < rect.x - margin
-			|| point.y < rect.y - margin
-			|| point.x > rect.x + rect.w + margin * 2
-			|| point.y > rect.y + rect.h + margin * 2);
+      || point.y < rect.y - margin
+      || point.x > rect.x + rect.w + margin * 2
+      || point.y > rect.y + rect.h + margin * 2);
 	},
 
 	// Separating Axis Theorem
@@ -126,8 +126,8 @@ helpers.merge(HitBox.prototype, {
 	},
 
 	/**
-	 * @private
-	 */
+   * @private
+   */
 	_points: function() {
 		var me = this;
 		var rect = me._rect;

@@ -1,6 +1,6 @@
 const {resolve} = require('path');
 
-module.exports = ({ defaults }) => {
+module.exports = ({defaults}) => {
 	function render(md) {
 		const fence = md.renderer.rules.fence;
 		md.renderer.rules.fence = (...args) => {
@@ -22,9 +22,9 @@ module.exports = ({ defaults }) => {
 			{
 				name: 'chart-defaults',
 				content: `
-					import Chart from 'chart.js';
-					Chart.defaults.set(${JSON.stringify(defaults)});
-				`
+          import {Chart} from 'chart.js';
+          Chart.defaults.set(${JSON.stringify(defaults)});
+        `
 			},
 			resolve(__dirname, 'global.js'),
 			resolve(__dirname, 'enhancer.js'),

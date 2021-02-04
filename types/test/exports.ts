@@ -8,22 +8,22 @@ Chart.register(Plugin);
 Chart.unregister(Plugin);
 
 const chart = new Chart('id', {
-	data: {
-		labels: [],
-		datasets: []
-	},
-	options: {},
-	type: 'bar',
-	plugins: [Plugin]
+  data: {
+    labels: [],
+    datasets: []
+  },
+  options: {},
+  type: 'bar',
+  plugins: [Plugin]
 });
 
 // Scriptable context
 const ctx: Context = {
-	active: true,
-	chart: chart,
-	datasetIndex: 0,
-	dataIndex: 0,
-	dataset: {
-		data: []
-	}
+  active: true,
+  chart: chart,
+  datasetIndex: 0,
+  dataIndex: 0,
+  dataset: {
+    data: []
+  }
 };

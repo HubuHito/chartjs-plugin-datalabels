@@ -42,7 +42,7 @@ You can download the latest version of `chartjs-plugin-datalabels` from the [Git
 ### HTML
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.7.3/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 ```
 
@@ -55,7 +55,7 @@ Once loaded, the plugin, available under the global `ChartDataLabels` property, 
 ### Module
 
 ```javascript
-import Chart from 'chart.js';
+import {Chart} from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 ```
 
@@ -73,10 +73,10 @@ Chart.plugins.register(ChartDataLabels);
 ```javascript
 // OR only to specific charts:
 var chart = new Chart(ctx, {
-    plugins: [ChartDataLabels],
-    options: {
-        // ...
-    }
+  plugins: [ChartDataLabels],
+  options: {
+    // ...
+  }
 })
 ```
 ::: tip
@@ -98,25 +98,25 @@ For example:
 ```javascript
 // Change default options for ALL charts
 Chart.defaults.set('plugins.datalabels', {
-    color: '#FE777B'
+  color: '#FE777B'
 });
 
 var chart = new Chart(ctx, {
-    options: {
-        plugins: {
-            // Change options for ALL labels of THIS CHART
-            datalabels: {
-                color: '#36A2EB'
-            }
-        }
-    },
-    data: {
-        datasets: [{
-            // Change options only for labels of THIS DATASET
-            datalabels: {
-                color: '#FFCE56'
-            }
-        }]
+  options: {
+    plugins: {
+      // Change options for ALL labels of THIS CHART
+      datalabels: {
+        color: '#36A2EB'
+      }
     }
+  },
+  data: {
+    datasets: [{
+      // Change options only for labels of THIS DATASET
+      datalabels: {
+        color: '#FFCE56'
+      }
+    }]
+  }
 });
 ```
